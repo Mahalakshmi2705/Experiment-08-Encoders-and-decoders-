@@ -18,6 +18,8 @@ Encoders
 
 Binary code of N digits can be used to store 2N distinct elements of coded information. This is what encoders and decoders are used for. Encoders convert 2N lines of input into a code of N bits and Decoders decode the N bits into 2N lines.
 
+
+
     1. Encoders - An encoder is a combinational circuit that converts binary information in the form of a 2N input lines into N output lines, which represent N bit code for the input. For simple encoders, it is assumed that only one input line is active at a time.
 
 As an example, let’s consider Octal to Binary encoder. As shown in the following figure, an octal-to-binary encoder takes 8 input lines and generates 3 output lines.
@@ -145,6 +147,9 @@ TIMING DIAGRAM:
 ![Screenshot (85)](https://user-images.githubusercontent.com/122199968/213879348-ad4a87db-367b-412c-9709-a16c0596afe0.png)
 
 
+
+
+
 TRUTH TABLE:
 
 ![Screenshot (86)](https://user-images.githubusercontent.com/122199968/213879405-265769ad-ba41-4f81-8dba-3eb1b7175566.png)
@@ -160,6 +165,9 @@ RLT LOGIC:
 TIMING DIAGRAM:
 
 ![Screenshot (88)](https://user-images.githubusercontent.com/122199968/213879492-ecf787a3-7f13-45f3-a8f3-e8a297e9bdc5.png)
+
+
+
 
 
 TRUTH TABLE:
