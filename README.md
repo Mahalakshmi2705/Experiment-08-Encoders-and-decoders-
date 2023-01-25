@@ -107,7 +107,10 @@ DECODER:
 
 OUTPUT:
 
+
+
 ENCODER:
+
 
 RTL LOGIC :
 
