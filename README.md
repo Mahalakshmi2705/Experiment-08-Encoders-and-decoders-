@@ -6,11 +6,11 @@ To implement 8 to 3 Encoder and  3to8 Decoder using verilog and validate its out
 
 HARDWARE REQUIRED:
 
-      PC, Cyclone II , USB flasher
+PC, Cyclone II , USB flasher
       
 SOFTWARE REQUIRED:
 
-      Quartus prime
+Quartus prime
       
 THEORY :
 
@@ -48,19 +48,18 @@ A decoder does the opposite job of an encoder. It is a combinational circuit tha
 
 Let’s take an example of 3-to-8 line decoder.
 
-Implementation –
-D0 is high when X = 0, Y = 0 and Z = 0. Hence,
+Implementation – D0 is high when X = 0, Y = 0 and Z = 0. Hence,
 
 D0 = X’ Y’ Z’ 
 Similarly,
 
-D1 = X’ Y’ Z
-D2 = X’ Y Z’
-D3 = X’ Y Z
-D4 = X Y’ Z’
-D5 = X Y’ Z
-D6 = X Y Z’
-D7 = X Y Z 
+ D1 = X’ Y’ Z
+ D2 = X’ Y Z’
+ D3 = X’ Y Z
+ D4 = X Y’ Z’
+ D5 = X Y’ Z
+ D6 = X Y Z’
+ D7 = X Y Z 
 
 
 ![image](https://user-images.githubusercontent.com/36288975/171543978-ee2d0671-2846-40a1-8705-507fd6287a49.png)
@@ -72,88 +71,55 @@ D7 = X Y Z
 ## Figure -04 8 to 3 Decoder implementation 
 
 Procedure:
-/* write all the steps invloved */
-
-
-
-PROCEDURE:
 
 1.Open Quartus II and select new project and choose the file location. 2.Module Declaration. Module should have the file name. 3.Input-Output Delecaration. 4.Use assign to define the functionality of logic circuits. 5.At the end give endmodule. 6.Run the program and choose RTL viewer to get RTL realization.
 
 PROGRAM:
 
-Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
-
-Developed by: MAHALAKSHMI S
-
-RegisterNumber:22008601
+    Program for Endocers and Decoders  and verify its truth table in quartus using Verilog programming.
+    Developed by: MAHALAKSHMI S
+    RegisterNumber:22008601
 
 ENCODER:
 
-module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
-
-input d0,d1,d2,d3,d4,d5,d6,d7;
-
-output a,b,c;
-
-or(a,d4,d5,d6,d7);
-
-or(b,d2,d3,d6,d7);
-
-or(c,d1,d3,d5,d7);
-
-endmodule
-
-
+    module encoder(a,b,c,d0,d1,d2,d3,d4,d5,d6,d7);
+    input d0,d1,d2,d3,d4,d5,d6,d7;
+    output a,b,c;
+    or(a,d4,d5,d6,d7);
+    or(b,d2,d3,d6,d7);
+    or(c,d1,d3,d5,d7);
+    endmodule
 
 DECODER:
 
-module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
-
-input a,b,c;
-
-output d0,d1,d2,d3,d4,d5,d6,d7;
-
-assign d0 = (~a&~b&~c);
-
-assign d1 = (~a&~b&c);
-
-assign d2 = (~a&b&~c);
-
-assign d3 = (~a&b&c);
-
-assign d4 = (a&~b&~c);
-
-assign d5 = (a&~b&c);
-
-assign d6 = (a&b&~c);
-
-assign d7 = (a&b&c);
-
-endmodule
-
-
+    module decoder(d0,d1,d2,d3,d4,d5,d6,d7,a,b,c);
+    input a,b,c;
+    output d0,d1,d2,d3,d4,d5,d6,d7;
+    assign d0 = (~a&~b&~c);
+    assign d1 = (~a&~b&c);
+    assign d2 = (~a&b&~c);
+    assign d3 = (~a&b&c);
+    assign d4 = (a&~b&~c);
+    assign d5 = (a&~b&c);
+    assign d6 = (a&b&~c);
+    assign d7 = (a&b&c);
+    endmodule
 
 OUTPUT:
 
+ENCODER:
 
 RTL LOGIC :
 
 ![Screenshot (84)](https://user-images.githubusercontent.com/122199968/213879296-f881c552-6e90-4585-8eac-a214742bd85c.png)
 
-
 TIMING DIAGRAM:
 
 ![Screenshot (85)](https://user-images.githubusercontent.com/122199968/213879348-ad4a87db-367b-412c-9709-a16c0596afe0.png)
 
-
-
-
-
 TRUTH TABLE:
 
 ![Screenshot (86)](https://user-images.githubusercontent.com/122199968/213879405-265769ad-ba41-4f81-8dba-3eb1b7175566.png)
-
 
 DECODER:
 
@@ -161,20 +127,13 @@ RLT LOGIC:
 
 ![Screenshot (87)](https://user-images.githubusercontent.com/122199968/213879439-0b5ff511-e7ee-4cce-a6a3-83fb5e9e0790.png)
 
-
 TIMING DIAGRAM:
 
 ![Screenshot (88)](https://user-images.githubusercontent.com/122199968/213879492-ecf787a3-7f13-45f3-a8f3-e8a297e9bdc5.png)
 
-
-
-
-
 TRUTH TABLE:
 
 ![Screenshot (89)](https://user-images.githubusercontent.com/122199968/213879539-247a4c08-43f2-4f2b-bf60-15af4b1dfe77.png)
-
-
 
 RESULTS:
 
